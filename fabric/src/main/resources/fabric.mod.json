@@ -16,19 +16,19 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.lowdragmc.lowdraglib.fabric.LDLibFabric"
+      "com.gregtechceu.gtlib.fabric.GTLibFabric"
     ],
     "client": [
-      "com.lowdragmc.lowdraglib.client.fabric.ClientProxyImpl"
+      "com.gregtechceu.gtlib.client.fabric.ClientProxyImpl"
     ],
     "rei_client": [
-      "com.lowdragmc.lowdraglib.fabric.rei.REIPlugin"
+      "com.gregtechceu.gtlib.fabric.rei.REIPlugin"
     ],
     "jei_mod_plugin": [
-      "com.lowdragmc.lowdraglib.jei.JEIPlugin"
+      "com.gregtechceu.gtlib.jei.JEIPlugin"
     ],
     "emi": [
-      "com.lowdragmc.lowdraglib.fabric.emi.EMIPlugin"
+      "com.gregtechceu.gtlib.fabric.emi.EMIPlugin"
     ]
   },
   "mixins": [

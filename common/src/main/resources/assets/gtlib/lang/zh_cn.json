@@ -1,0 +1,9 @@
+{
+  "gtlib.gui.tips.confirm": "确认",
+  "gtlib.gui.tips.cancel": "取消",
+  "gtlib.fluid.empty": "空",
+  "gtlib.fluid.amount": "§9流体：%d/%d mB",
+  "gtlib.fluid.temperature": "§cw温度：%d K",
+  "gtlib.fluid.state_gas": "§a状态：气体",
+  "gtlib.fluid.state_liquid": "§a状态：流体"
+}

@@ -1,0 +1,8 @@
+{
+    "vertex": "gtlib:fast_blit",
+    "fragment": "gtlib:fast_blit",
+    "attributes": [ "Position" ],
+    "samplers": [
+        { "name": "DiffuseSampler" }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "gtlib": {
+        "connection": "gtlib:block/machine_coil_cupronickel_bloom_ctm",
+        "emissive": true
+    }
+}

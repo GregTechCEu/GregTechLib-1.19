@@ -1,0 +1,39 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.gregtechceu.gtlib.core.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "com.gregtechceu.gtlib.core.mixins.GTLibMixinPlugin",
+  "client": [
+    "BlockEntityRendererDispatcherMixin",
+    "BlockModelShaperMixin",
+    "ItemRendererMixin",
+    "LanguageMixin",
+    "ModelBakeryMixin",
+    "ParticleEngineMixin",
+    "TextureAtlasMixin",
+    "WorldRendererMixin",
+    "accessor.AbstractContainerScreenAccessor",
+    "accessor.VertexFormatAccessor",
+    "emi.RecipeScreenMixin",
+    "emi.WidgetGroupAccessor",
+    "emi.WidgetGroupMixin",
+    "jei.RecipesGuiAccessor",
+    "jei.RecipeSlotAccessor"
+  ],
+  "mixins": [
+    "BlockEntityMixin",
+    "PackConfigMixin",
+    "ReloadableResourceManagerMixin",
+    "accessor.AbstractContainerMenuAccessor",
+    "accessor.ServerPlayerAccessor",
+    "accessor.SlotAccessor",
+    "emi.EmiRenderHelperMixin",
+    "jei.JeiRecipeLayoutMixin",
+    "jei.RecipeLayoutAccessor",
+    "jei.RecipeSlotsAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

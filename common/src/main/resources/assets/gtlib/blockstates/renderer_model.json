@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gtlib:block/renderer_model"
+    }
+  }
+}

@@ -1,2 +1,2 @@
-# LDLib--Architectury
-A template based on Architectury for creating addons for LDLib on Forge, Fabric, and Quilt, simultaneously.
+# GregTechLib 1.19
+GregTech library mod based on Architectury for running on Forge, Fabric, and Quilt, simultaneously.

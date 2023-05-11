@@ -1,0 +1,9 @@
+{
+  "gtlib.gui.tips.confirm": "Подтвердить",
+  "gtlib.gui.tips.cancel": "Отмена",
+  "gtlib.fluid.empty": "Пусто",
+  "gtlib.fluid.amount": "§9Количество: %d/%d mB",
+  "gtlib.fluid.temperature": "§cТемпература: %d K",
+  "gtlib.fluid.state_gas": "§aСостояние: Газообразное",
+  "gtlib.fluid.state_liquid": "§aСостояние: Жидкость"
+}

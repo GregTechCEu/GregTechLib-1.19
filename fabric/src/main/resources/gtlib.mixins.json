@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.gregtechceu.gtlib.fabric.core.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "com.gregtechceu.gtlib.fabric.core.mixins.GTLibFabricMixinPlugin",
+  "client": [
+    "BlockModelShaperMixin",
+    "BlockRenderInfoMixin",
+    "GameRendererMixin",
+    "MinecraftMixin",
+    "ModelBakeryMixin",
+    "ModelManagerMixin",
+    "ShaderInstanceMixin",
+    "jei.RecipesGuiMixin"
+  ],
+  "mixins": [
+    "MinecraftServerMixin",
+    "accessor.PackRepositoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
