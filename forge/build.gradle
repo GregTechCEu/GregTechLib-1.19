@@ -163,10 +163,10 @@ publishing {
     repositories {
         // Add repositories to publish to here.
         maven {
-            url "https://maven.firstdarkdev.xyz/snapshots"
+            url "https://maven.pkg.github.com/GregTechCEu/GregTechLib-1-19"
             credentials {
-                username System.getenv("MAVEN_USER")
-                password System.getenv("MAVEN_PASS")
+                username System.getenv("GITHUB_ACTOR")
+                password System.getenv("GITHUB_TOKEN")
             }
         }
     }

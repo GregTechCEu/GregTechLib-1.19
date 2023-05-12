@@ -11,8 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MAVEN_PASS: ${{ secrets.MAVEN_PASS }}
-      MAVEN_USER: ${{ secrets.MAVEN_USER }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
         with:
