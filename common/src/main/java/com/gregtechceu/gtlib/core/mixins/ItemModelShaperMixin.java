@@ -37,50 +37,53 @@ public class ItemModelShaperMixin {
     public void injectGetModel(ItemStack stack, CallbackInfoReturnable<BakedModel> cir) {
         if (stack.getItem() instanceof IItemRendererProvider provider) {
             IRenderer renderer = provider.getRenderer(stack);
-            int itemIndex = getIndex(stack.getItem());
+            if (renderer != null) {
+                int itemIndex = getIndex(stack.getItem());
 
-            shapesCache.putIfAbsent(itemIndex, new BakedModel() {
-                @Override
-                public List<BakedQuad> getQuads(@org.jetbrains.annotations.Nullable BlockState state, @org.jetbrains.annotations.Nullable Direction direction, RandomSource random) {
-                    return renderer.renderModel(null, null, state, direction, random);
-                }
+                shapesCache.putIfAbsent(itemIndex, new BakedModel() {
+                    @Override
+                    public List<BakedQuad> getQuads(@org.jetbrains.annotations.Nullable BlockState state, @org.jetbrains.annotations.Nullable Direction direction, RandomSource random) {
+                        return renderer.renderModel(null, null, state, direction, random);
+                    }
 
-                @Override
-                public boolean useAmbientOcclusion() {
-                    return renderer.useAO();
-                }
+                    @Override
+                    public boolean useAmbientOcclusion() {
+                        return renderer.useAO();
+                    }
 
-                @Override
-                public boolean isGui3d() {
-                    return renderer.useBlockLight(stack);
-                }
+                    @Override
+                    public boolean isGui3d() {
+                        return renderer.useBlockLight(stack);
+                    }
 
-                @Override
-                public boolean usesBlockLight() {
-                    return renderer.useBlockLight(stack);
-                }
+                    @Override
+                    public boolean usesBlockLight() {
+                        return renderer.useBlockLight(stack);
+                    }
 
-                @Override
-                public boolean isCustomRenderer() {
-                    return false;
-                }
+                    @Override
+                    public boolean isCustomRenderer() {
+                        return false;
+                    }
 
-                @Override
-                public TextureAtlasSprite getParticleIcon() {
-                    return renderer.getParticleTexture();
-                }
+                    @Override
+                    public TextureAtlasSprite getParticleIcon() {
+                        return renderer.getParticleTexture();
+                    }
 
-                @Override
-                public ItemTransforms getTransforms() {
-                    return ItemTransforms.NO_TRANSFORMS;
-                }
+                    @Override
+                    public ItemTransforms getTransforms() {
+                        return ItemTransforms.NO_TRANSFORMS;
+                    }
 
-                @Override
-                public ItemOverrides getOverrides() {
-                    return ItemOverrides.EMPTY;
-                }
-            });
-            cir.setReturnValue(shapesCache.get(itemIndex));
+                    @Override
+                    public ItemOverrides getOverrides() {
+                        return ItemOverrides.EMPTY;
+                    }
+                });
+                cir.setReturnValue(shapesCache.get(itemIndex));
+            }
+
         }
     }
 }
