@@ -64,10 +64,12 @@ public class BlockStateRenderer implements IRenderer {
     public BlockState getState(BlockState blockState) {
         BlockState state = getBlockInfo().getBlockState();
         Direction facing = Direction.NORTH;
-        if (blockState.hasProperty(BlockStateProperties.FACING)) {
-            facing = blockState.getValue(BlockStateProperties.FACING);
-        } else if (blockState.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
-            facing = blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
+        if (blockState != null) {
+            if (blockState.hasProperty(BlockStateProperties.FACING)) {
+                facing = blockState.getValue(BlockStateProperties.FACING);
+            } else if (blockState.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
+                facing = blockState.getValue(BlockStateProperties.HORIZONTAL_FACING);
+            }
         }
         try {
             switch (facing) {

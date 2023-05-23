@@ -53,7 +53,7 @@ public class ItemModelShaperMixin {
 
                     @Override
                     public boolean isGui3d() {
-                        return renderer.useBlockLight(stack);
+                        return true;
                     }
 
                     @Override
